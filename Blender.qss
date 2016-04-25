@@ -93,6 +93,7 @@ Main window
 ==================================================================================================*/
 QMainWindow,
 QDialog,
+QDockWidget,
 QToolBar  {
     background-color: #727272; /* main background color */
 }
