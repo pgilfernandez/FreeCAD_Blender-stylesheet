@@ -5,6 +5,8 @@ version 1.0
 QT theme (stylesheet) specially developed for **FreeCAD** (http://www.freecadweb.org/).
 It might work with other software that uses QT styling.
 
+![Blender stylesheet](/../media/screenshot.png?raw=true "Blender stylesheet")
+
 Installation
 ------
 1. This stylesheet is designed for FreeCAD 0.16 and above (download the last stable release **here** (http://www.freecadweb.org/))
