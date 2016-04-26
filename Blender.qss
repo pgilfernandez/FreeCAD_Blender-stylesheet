@@ -8,7 +8,7 @@ It might work with other software that uses QT styling.
 
 LICENSE
 ============================================================================================================
-Copyright (c) 2016 Pablo Gil Fernández
+Copyright (c) 2016 Pablo Gil FernÃ¡ndez
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
@@ -161,6 +161,38 @@ QMenu::separator {
 
 QMenu::indicator:non-exclusive:checked {
     color: white;
+}
+
+/* Fix for elements inside a drop-down menu */
+QMenu QRadioButton,
+QMenu QCheckBox,
+QMenu QPushButton,
+QMenu QToolButton {
+    color: white; /* same as regular QRadioButton and QCheckBox */
+}
+
+QMenu QRadioButton:hover,
+QMenu QCheckBox:hover,
+QMenu QPushButton:hover,
+QMenu QToolButton:hover,
+QMenu QPushButton:pressed,
+QMenu QToolButton:pressed,
+QMenu QPushButton:selected,
+QMenu QToolButton:selected {
+    color: black;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #7aa3e5, stop:1 #5680c1); /* same as QMenu::item:selected and QMenu::item:pressed */
+}
+
+QMenu QRadioButton:disabled,
+QMenu QCheckBox:disabled {
+    color: #5c5c5c;
+}
+
+QMenu QRadioButton::indicator:disabled,
+QMenu QCheckBox::indicator:disabled {
+    color: #5c5c5c;
+    background-color: transparent;
+    border: 1px solid #5c5c5c;
 }
 
 
@@ -2056,6 +2088,28 @@ QToolBar > QToolButton::menu-arrow:open {
     background-image: url(qss:images/down_arrow_lighter.png);
 }
 
+/* when QToolButton is checked: */
+QToolBar > QToolButton:checked {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #4771b3, stop:1 #638dcf);
+    border: 1px solid #3d6199;
+    border-top-color: #284066;
+}
+
+QToolBar > QToolButton:checked:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #557cba, stop:1 #6f96d3);
+}
+
+QToolBar > QToolButton:checked:pressed {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #638dcf, stop:1 #4771b3);
+    border: 1px solid #3d6199;
+    border-bottom-color: #284066;
+}
+
+QToolBar > QToolButton:!checked:pressed {
+    background-color: rgba(0,0,0,20);
+    border: none;
+}
+
 /*The "show more" button  (it can also be stylable with "QToolBarExtension" */
 QToolBar QToolButton#qt_toolbar_ext_button {
     margin: 0px;
@@ -2215,41 +2269,3 @@ QDialog QGroupBox QFrame {
 }
 
 *[mandatoryField="true"] { background-color: cyan }
-
-QToolButton:checked {
-    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #4771b3, stop:1 #638dcf);
-    border: 1px solid #3d6199;
-    border-top-color: #284066;
-}
-
-QToolButton:checked:hover {
-    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #557cba, stop:1 #6f96d3);
-}
-
-QToolButton:checked:pressed {
-    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #638dcf, stop:1 #4771b3);
-    border: 1px solid #3d6199;
-    border-bottom-color: #284066;
-}
-
-QToolButton:!checked:pressed {
-    background-color: rgba(0,0,0,20);
-    border: none;
-}
-
-
-/* Fix for elements inside a drop-down menu */
-QMenu QRadioButton,
-QMenu QCheckBox,
-QMenu QPushButton,
-QMenu QToolButton {
-    color: white; /* same as regular QRadioButton and QCheckBox */
-}
-
-QMenu QRadioButton:hover,
-QMenu QCheckBox:hover,
-QMenu QPushButton:hover,
-QMenu QToolButton:hover {
-    color: black;
-    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #7aa3e5, stop:1 #5680c1); /* same as QMenu::item:selected and QMenu::item:pressed */
-}
