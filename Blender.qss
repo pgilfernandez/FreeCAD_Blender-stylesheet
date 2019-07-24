@@ -8,7 +8,7 @@ It might work with other software that uses QT styling.
 
 LICENSE
 ============================================================================================================
-Copyright (c) 2016 Pablo Gil Fernández
+Copyright (c) 2019 Pablo Gil Fernández
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
@@ -955,34 +955,31 @@ QTreeView::branch  {
 }
 
 QTreeView::branch:has-siblings:!adjoins-item  {
-    border-image: url(qss:images_dark-light/branch_vline.svg) 0;
+    border-image: url(qss:images_dark-light/branch_vline_dark.svg) 0;
 }
 
 QTreeView::branch:has-siblings:adjoins-item  {
-    border-image: url(qss:images_dark-light/branch_more.svg) 0;
+    border-image: url(qss:images_dark-light/branch_more_dark.svg) 0;
 }
 
 QTreeView::branch:!has-children:!has-siblings:adjoins-item  {
-    border-image: url(qss:images_dark-light/branch_end.svg) 0;
+    border-image: url(qss:images_dark-light/branch_end_dark.svg) 0;
 }
 
 QTreeView::branch:closed:has-children:has-siblings  {
-    image: url(qss:images_dark-light/branch_closed_dark.svg);
+    border-image: url(qss:images_dark-light/branch_more_closed_dark.svg) 0;
 }
 
 QTreeView::branch:has-children:!has-siblings:closed  {
-    image: url(qss:images_dark-light/branch_closed_dark.svg);
-    border-image: url(qss:images_dark-light/branch_end.svg) 0;
+    border-image: url(qss:images_dark-light/branch_end_closed_dark.svg) 0;
 }
 
 QTreeView::branch:open:has-children:has-siblings  {
-    image: url(qss:images_dark-light/branch_open_dark.svg);
-    border-image: url(qss:images_dark-light/branch_more.svg) 0;
+    border-image: url(qss:images_dark-light/branch_more_open_dark.svg) 0;
 }
 
 QTreeView::branch:open:has-children:!has-siblings  {
-    image: url(qss:images_dark-light/branch_open_dark.svg);
-    border-image: url(qss:images_dark-light/branch_end.svg) 0;
+    border-image: url(qss:images_dark-light/branch_end_open_dark.svg) 0;
 }
 
 
