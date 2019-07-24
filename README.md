@@ -1,11 +1,13 @@
 About
 -------
-version 1.0
+version 2.05
 
 QT theme (stylesheet) specially developed for **FreeCAD** (http://www.freecadweb.org/).
 It might work with other software that uses QT styling.
 
 ![Blender stylesheet](/../media/screenshot.png?raw=true "Blender stylesheet")
+
+**It's being refactored due to the FreeCAD switch to Qt5, so it may have some bugs.**
 
 Installation
 ------
@@ -17,7 +19,7 @@ Installation
 
 License
 ------
-Copyright (c) 2016 Pablo Gil Fernández.
+Copyright (c) 2019 Pablo Gil Fernández.
 
 ![Attribution-ShareAlike 4.0 International](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
